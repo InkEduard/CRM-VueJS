@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
+// реєстрація сторінок
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
@@ -13,7 +14,7 @@ export default new Router({
       meta: {
         layout: "empty",
       },
-      component: () => import("../views/Login.vue"),
+      component: () => import("../views/Login.vue"), // ледаче завантаження сторінки 
     },
     {
       path: "/register",
