@@ -26,7 +26,8 @@ firebase.initializeApp({
   projectId: "vue-crm-local",
   storageBucket: "vue-crm-local.appspot.com",
   messagingSenderId: "850608289908",
-  appId: "1:850608289908:web:94555ccb459bdbf66fb921"
+  appId: "1:850608289908:web:94555ccb459bdbf66fb921",
+  databaseURL: "https://vue-crm-local-default-rtdb.europe-west1.firebasedatabase.app/"
 });
 
 let app;

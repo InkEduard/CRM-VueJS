@@ -5,9 +5,21 @@ import auth from "./auth";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    error: null
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    setError(state, error) {
+      state.error = error;
+    },
+    clearError(state) {
+      state.error = null;
+    }
+  },
+  getters: {
+    error: s => s.error
+  },
   actions: {},
   modules: {
     auth
