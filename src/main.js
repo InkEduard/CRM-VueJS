@@ -5,7 +5,9 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import dateFilter from '@/filters/date.filter';
+import currencyFilter from '@/filters/currency.filter';
 import messagePlugin from '@/utils/message.plugin';
+import Loader from '@/components/app/Loader';
 import "materialize-css/dist/js/materialize.min";
 
 import firebase from "firebase/app";
@@ -19,6 +21,9 @@ Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 // Знаходиться в глобальный областы видимості
 Vue.filter('date', dateFilter);
+Vue.filter('currency', currencyFilter);
+// Реєстрація компоненту
+Vue.component('Loader', Loader);
 
 firebase.initializeApp({
   apiKey: "AIzaSyC249dYNx-5RwF0PFTZg43W_7dq1we3ZJ0",
