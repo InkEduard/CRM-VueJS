@@ -120,7 +120,7 @@ export default {
     this.select =  M.FormSelect.init(this.$refs.select);
     M.updateTextFields();
   },
-  pestroyed() {
+  destroyed() {
     if (this.select && this.select.destroy) {
       this.select.destroy()
     }
